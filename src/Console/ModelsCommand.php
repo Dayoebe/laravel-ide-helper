@@ -1038,16 +1038,17 @@ class ModelsCommand extends Command
         }
     }
 
-public function unsetMethod($name)
-{
-    foreach (array_keys($this->methods) as $method) {
-        if (strtolower($method) === strtolower($name)) {
-            unset($this->methods[$method]);
+    public function unsetMethod($name)
+    {
+        foreach (array_keys($this->methods) as $method) {
+            if (strtolower($method) === strtolower($name)) {
+                unset($this->methods[$method]);
 
-            return;
+                return;
+            }
         }
     }
-}
+    
     public function getMethodType(Model $model, string $classType)
     {
         $modelName = $this->getClassNameInDestinationFile($model, get_class($model));
