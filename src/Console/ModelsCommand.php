@@ -1048,7 +1048,7 @@ class ModelsCommand extends Command
             }
         }
     }
-    
+
     public function getMethodType(Model $model, string $classType)
     {
         $modelName = $this->getClassNameInDestinationFile($model, get_class($model));
