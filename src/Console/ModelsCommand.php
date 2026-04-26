@@ -1038,7 +1038,7 @@ class ModelsCommand extends Command
         }
     }
 
-    public function unsetMethod($name)
+public function unsetMethod($name)
 {
     foreach (array_keys($this->methods) as $method) {
         if (strtolower($method) === strtolower($name)) {
@@ -1048,7 +1048,6 @@ class ModelsCommand extends Command
         }
     }
 }
-
     public function getMethodType(Model $model, string $classType)
     {
         $modelName = $this->getClassNameInDestinationFile($model, get_class($model));
